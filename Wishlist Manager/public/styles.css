@@ -1,0 +1,248 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  background-color: #34dce2;
+}
+
+#login-section,
+#wishlist-section {
+  margin: 20px auto;
+  width: 400px;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+#logged-in-banner button {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Target buttons within the banner only */
+#logged-in-banner button.active {
+  background-color: rgb(209, 46, 196);
+  /* Change to your desired active color */
+}
+
+/* Target buttons within the banner only */
+#logged-in-banner button:hover {
+  background-color: #b6c027;
+  /* Change to your desired hover color */
+}
+
+
+
+#login-banner button {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Target buttons within the banner only */
+#login-banner button.active {
+  background-color: rgb(209, 46, 196);
+  /* Change to your desired active color */
+}
+
+/* Target buttons within the banner only */
+#login-banner button:hover {
+  background-color: #b6c027;
+  /* Change to your desired hover color */
+}
+
+
+
+
+
+#new-wishlist-button {
+  display: block;
+  margin-top: 10px;
+  /* Adjust the margin as needed */
+  margin-bottom: 5px;
+  /* Adjust the margin as needed for the desired gap */
+
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.remove-button {
+  background-color: #DC3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+
+
+#sidebar {
+  float: left;
+  width: 200px;
+  margin-top: 20px;
+}
+
+/*
+#wishlist-section {
+  margin-left: 220px;
+
+  margin-top: 20px;
+}
+
+*/
+
+
+/* Adjust the margin of the wishlist list items for proper alignment */
+ul#wishlist-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each wishlist list item */
+ul#wishlist-list li {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+#wishlist-list li.selected {
+  background-color: #007BFF;
+  /* Change to your desired styling */
+  color: white;
+  /* Change text color if needed */
+}
+
+/* Add styling to table headers */
+#wishlistTable th {
+  background-color: #f2f2f2;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.spinner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  animation: spin 2s linear infinite;
+}
+
+.spinner-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.table-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent grey overlay */
+  z-index: 2;
+  /* Place the overlay above the table */
+}
+
+.refresh-button {
+  margin-right: 0px;
+  /* Adjust the margin as needed */
+}
+
+/* Style for both refresh and remove buttons */
+.refresh-button,
+.remove-button {
+  /* width: 100px; */
+  /* Set the desired width */
+  height: 30px;
+  /* Set the desired height */
+  /* Add other styles as needed */
+}
+
+/* CSS for the navigation ribbon */
+header {
+  background-color: #34dce2;
+  /* Choose your desired color */
+  color: #fff;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+
+
+
+
+/* CSS for the account settings column */
+aside {
+  /* background-color: #f1f1f1; */
+  /* Choose your desired color */
+  padding: 15px;
+}

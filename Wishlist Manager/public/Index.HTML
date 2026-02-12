@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Custom Wishlist</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="https://www.google.com/favicon.ico">
+
+
+</head>
+
+<body>
+  <h1>Custom Wishlist</h1>
+
+  <header>
+
+    <!-- Banner for logged-in users -->
+    <nav id="logged-in-banner" style="display: none;">
+      <ul>
+        <button onclick="handleButtonClick(this)">My Wishlist</button>
+        <li>
+        <li><button onclick="handleButtonClick(this)">Shared Wishlists</button></li>
+        <li><button onclick="handleButtonClick(this)">About Us</button></li>
+        <li><button onclick="handleButtonClick(this)">Contact Us</button></li>
+        <li><button onclick="handleButtonClick(this)">Something Not Working?</button></li>
+      </ul>
+    </nav>
+
+    <!-- Banner for login screen -->
+    <nav id="login-banner" style="display: none;">
+      <ul>
+        <li><button onclick="handleLoginbuttonClick(this)">Login</button></li>
+        <li><button onclick="handleLoginbuttonClick(this)">About Us</button></li>
+        <li><button onclick="handleLoginbuttonClick(this)">Contact Us</button></li>
+        <li><button onclick="handleLoginbuttonClick(this)">Something went wrong?</button></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <div id="login-section">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showRegistration()">Register here</a></p>
+  </div>
+
+  <div id="register-section" style="display: none;">
+    <input type="text" id="register-username" placeholder="Username">
+    <input type="password" id="register-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+  </div>
+
+  <div id="sidebar" style="display: none;">
+    <h2>Wishlists</h2>
+    <button id="new-wishlist-button" onclick="createNewWishlist()">New Wishlist</button>
+    <ul id="wishlist-list">
+      <!-- Existing wishlists will be dynamically added here -->
+    </ul>
+  </div>
+
+  <img id="cover-image" src="cover-page.png" alt="Cover Image">
+  <!-- Add a separate div for the "Please select a wishlist" message -->
+  <div id="no-wishlist-message"
+    style="display: none; text-align: center; position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%);">
+    Please select a wishlist
+  </div>
+
+  <div id="wishlist-section" style="display: none;">
+    <input type="text" id="productUrl" placeholder="Enter product URL">
+    <button onclick="addItem()">Add to Wishlist</button>
+    <div id="spinner" class="spinner">
+      <div class="spinner-inner"></div>
+    </div>
+    <div id="table-overlay" class="table-overlay"></div>
+    <table id="wishlistTable">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Website</th>
+          <th>Image</th>
+          <th>Link</th>
+          <th colspan="2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <aside>
+      <div class="account-settings">
+        <!-- Account settings content (e.g., user profile, settings links) -->
+      </div>
+    </aside>
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="wishlist.js"></script>
+</body>
+
+</html>
